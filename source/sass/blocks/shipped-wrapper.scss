@@ -1,0 +1,10 @@
+.shipped-wrapper {
+  background-color: $lightgray;
+  padding: 20px 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .shipped-wrapper {
+    padding: 44px 91px;
+  }
+}

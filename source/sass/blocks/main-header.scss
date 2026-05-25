@@ -1,0 +1,32 @@
+.main-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.main-header__logo {
+  position: relative;
+  z-index: 1;
+  width: 185px;
+  height: 56px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .main-header__logo {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-header {
+    display: block;
+  }
+}

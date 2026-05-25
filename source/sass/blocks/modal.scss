@@ -1,0 +1,83 @@
+.modal {
+  position: relative;
+  padding: 45px 42px 35px 41px;
+  margin: auto;
+  background-color: $white;
+}
+
+.modal__title {
+  @include fontsizes(700, 18px, 26px);
+  text-align: center;
+  margin: 0 0 25px;
+  text-transform: uppercase;
+}
+
+.modal__description {
+  @include fontsizes(400, 14px, 21px);
+  color: $lightblack;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 28px;
+}
+
+.modal__button {
+  @include fontsizes(700, 18px, 26px);
+  min-width: 180px;
+  padding: 18px 64px 14px 63px;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .modal {
+    min-width: 400px;
+    padding: 50px 47px 49px 46px;
+  }
+}
+
+@media (min-width: $mobile-width-only) {
+  .modal__indent {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .modal__indent {
+    display: inline-block;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .modal__title {
+    @include fontsizes(700, 30px, 40px);
+    margin-bottom: 26px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .modal__description {
+    margin-bottom: 42px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .modal__button {
+    @include fontsizes(700, 21px, 26px);
+    min-width: 272px;
+    margin: 0 auto;
+    padding: 18px 108px 14px 107px;
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .modal {
+    padding-top: 48px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .modal__description {
+    margin-bottom: 44px;
+  }
+}

@@ -1,0 +1,15 @@
+.page__body {
+  @include fontsizes(400, 14px, 21px);
+  width: 100%;
+  max-width: 1200px;
+  font-family: $main-font;
+  margin: 0 auto;
+  padding: 0;
+  color: $black;
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+  background-color: $lightgray;
+}
+
+.body-wrapper {
+  background-color: $white;
+}
