@@ -146,10 +146,9 @@
   align-items: center;
   column-gap: 25px;
   max-width: 277px;
-  padding: 3px 3px 3px 29px;
+  padding: 9px 9px 9px 9px;
 
   @include vp-767 {
-    max-width: 76%;
     padding-left: 19px;
     column-gap: 19px;
   }

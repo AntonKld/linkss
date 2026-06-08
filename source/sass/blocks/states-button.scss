@@ -3,10 +3,11 @@
   border-radius: 30px;
   color: $color-cerulean-blue;
   display: grid;
-  grid-template-columns: 1fr 46px;
+  grid-template-columns: 1fr 85px 1fr;
 
   @include vp-767 {
-    grid-template-columns: 1fr 34px;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   &:hover {
@@ -35,6 +36,31 @@
     border: 1px solid $color-mischka;
     color: $color-mischka;
     pointer-events: none;
+  }
+}
+
+.project_social {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.project_social-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.states-button .footer__social {
+  @include vp-767 {
+    margin: 0;
+    margin-left: 0;
+    order: 0;
   }
 }
 
@@ -68,6 +94,12 @@
   color: $color-cerulean-blue;
   transform: rotate(45deg);
 }
+
+/*.footer__social span {
+  background-color: $color-default-white;
+  stroke: $color-cerulean-blue;
+  color: $color-cerulean-blue;
+}*/
 
 .states-button:hover .states-button-wrapper {
   background-color: $color-default-white;
