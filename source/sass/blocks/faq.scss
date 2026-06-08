@@ -1,0 +1,484 @@
+.faq__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 61px;
+  padding-bottom: 62px;
+
+  @include vp-1199 {
+    padding-top: 49px;
+  }
+
+  @include vp-767 {
+    padding-top: 28px;
+    padding-bottom: 33px;
+  }
+}
+
+.faq__container h2 {
+  color: $color-cerulean-blue;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 50px;
+  margin: 0;
+  margin-bottom: 67px;
+
+  @include vp-1199 {
+    font-size: 34px;
+    margin-bottom: 41px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 33px;
+  }
+}
+
+.faq__list {
+  width: 83%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+  row-gap: 10px;
+  margin-bottom: 10px;
+
+  @include vp-1199 {
+    width: 100%;
+  }
+}
+
+.faq__item {
+  border: 1px solid $color-cerulean-blue;
+  border-radius: 16px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.faq__item.is-active {
+  background-color: $color-cerulean-blue;
+  padding-bottom: 33px;
+
+  @include vp-1199 {
+    padding-bottom: 25px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 15px;
+  }
+}
+
+.faq__button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: transparent;
+  width: 100%;
+  border-radius: 16px;
+  border: 0;
+  text-align: start;
+  padding: 39px;
+
+  @include vp-1199 {
+    padding: 29px;
+  }
+
+  @include vp-767 {
+    padding: 19px 14px 19px 14px;
+  }
+
+  &:not(.is-active) {
+    &:has(.faq__button-icon:active) {
+      span {
+        color: $color-endeavour;
+      }
+    }
+
+    &:hover {
+      background-color: $color-default-white;
+      border-radius: 16px;
+
+      .faq__button-icon {
+        background-color: $color-default-white;
+        border-color: $color-cerulean-blue;
+
+        &::before,
+        &::after {
+          background-color: $color-cerulean-blue;
+          border-color: $color-cerulean-blue;
+        }
+
+        @include active {
+          background-color: $color-endeavour;
+          border-color: $color-endeavour;
+
+          &::before,
+          &::after {
+            background-color: $color-default-white;
+          }
+        }
+      }
+    }
+
+    &:focus {
+      background-color: $color-default-white;
+      border-radius: 16px;
+
+      .faq__button-icon {
+        background-color: $color-default-white;
+        border-color: $color-cerulean-blue;
+
+        &::before,
+        &::after {
+          background-color: $color-cerulean-blue;
+        }
+
+        @include active {
+          background-color: $color-endeavour;
+          border-color: $color-endeavour;
+
+          &::before,
+          &::after {
+            background-color: $color-default-white;
+          }
+        }
+      }
+    }
+
+    &:focus-visible {
+      background-color: $color-default-white;
+      border-radius: 16px;
+      outline: none;
+
+      .faq__button-icon {
+        background-color: $color-default-white;
+        border-color: $color-cerulean-blue;
+
+        &::before,
+        &::after {
+          background-color: $color-cerulean-blue;
+        }
+
+        @include active {
+          background-color: $color-endeavour;
+          border-color: $color-endeavour;
+
+          &::before,
+          &::after {
+            background-color: $color-default-white;
+          }
+        }
+      }
+    }
+
+    &:active {
+      background-color: $color-default-white;
+
+      span {
+        color: $color-endeavour;
+      }
+
+      .faq__button-icon {
+        background-color: $color-endeavour;
+        border-color: $color-endeavour;
+
+        &::before,
+        &::after {
+          background-color: $color-default-white;
+        }
+      }
+    }
+  }
+}
+
+.faq__item.is-active .faq__button {
+  background-color: $color-cerulean-blue;
+  padding-bottom: 13px;
+
+  @include vp-1199 {
+    padding-bottom: 16px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 14px;
+  }
+
+  span {
+    color: $color-default-white;
+  }
+}
+
+.faq__item.is-active .faq__button:active {
+  background-color: $color-endeavour;
+
+  &.faq__button-icon {
+    background-color: $color-endeavour;
+  }
+}
+
+.faq__item.is-active .faq__button:hover .faq__button-icon {
+  background-color: $color-cerulean-blue;
+  border: 1px solid $color-default-white;
+
+  &::before {
+    background-color: $color-default-white;
+  }
+}
+
+.faq__item.is-active:has(.faq__button:active) {
+  background-color: $color-endeavour;
+}
+
+.faq__item.is-active .faq__button:active .faq__button-icon {
+  background-color: $color-default-white;
+  border: 1px solid $color-endeavour;
+
+  &::before {
+    background-color: $color-cerulean-blue;
+  }
+}
+
+.faq__button span {
+  color: $color-cerulean-blue;
+  max-width: 67%;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 34px;
+  align-self: center;
+
+  @include vp-1199 {
+    font-size: 22px;
+    line-height: 26px;
+    max-width: 90%;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 18px;
+    max-width: 83%;
+
+    & > br {
+      display: none;
+    }
+  }
+}
+
+.faq__button-icon {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: $color-cerulean-blue;
+  border: 1px solid $color-cerulean-blue;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  transition: background-color $trans-default;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 1px;
+    margin: auto;
+    background-color: $color-default-white;
+    transition: background-color $trans-default;
+    inset: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 18px;
+    margin: auto;
+    background-color: $color-default-white;
+    opacity: 1;
+    transition:
+      background-color $trans-default,
+      opacity $trans-default;
+    inset: 0;
+  }
+
+  &:hover {
+    background-color: $color-transparent;
+    border: 1px solid $color-default-white;
+
+    &::before,
+    &::after {
+      background-color: $color-cerulean-blue;
+    }
+  }
+
+  &:focus {
+    background-color: $color-transparent;
+
+    &::before,
+    &::after {
+      background-color: $color-cerulean-blue;
+    }
+  }
+
+  &:active {
+    background-color: $color-endeavour;
+    border-color: $color-endeavour;
+
+    &::before,
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
+
+  @include disabled {
+    background-color: $color-mischka;
+    border-color: $color-mischka;
+
+    pointer-events: none;
+
+    &::before,
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
+}
+
+.faq__item.is-active .faq__button-icon {
+  background-color: $color-default-white;
+  border: 1px solid $color-default-white;
+
+  &::before {
+    background-color: $color-cerulean-blue;
+  }
+
+  &::after {
+    opacity: 0;
+  }
+
+  &:hover {
+    background-color: $color-transparent;
+    border: 1px solid $color-default-white;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+  }
+
+  &:focus {
+    background-color: $color-transparent;
+    border: 1px solid $color-default-white;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+  }
+
+  &:active {
+    background-color: $color-default-white;
+    border-color: $color-default-white;
+
+    &::before {
+      background-color: $color-endeavour;
+    }
+  }
+}
+
+.faq__text p {
+  max-width: 70%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $color-alabaster;
+  margin: 0;
+
+  @include vp-1199 {
+    max-width: 582px;
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+    font-size: 14px;
+  }
+}
+
+.faq__item.is-active .faq__text {
+  max-height: 100%;
+  padding: 0 40px;
+
+  @include vp-1199 {
+    padding: 0 29px;
+  }
+
+  @include vp-767 {
+    padding: 0 14px;
+  }
+}
+
+.faq__list--wrapper {
+  @include vp-1199 {
+    margin-bottom: 10px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 10px;
+  }
+}
+
+.faq__list--wrapper .faq__button {
+  padding: 29px 40px 34px;
+
+  @include vp-1199 {
+    padding: 24px 29px 24px;
+  }
+
+  @include vp-767 {
+    padding: 19px 14px;
+  }
+}
+
+.faq__list--wrapper .faq__button-icon {
+  margin-top: -11px;
+
+  @include vp-1199 {
+    margin-top: -2px;
+  }
+
+  @include vp-767 {
+    margin-top: 0;
+  }
+}
+
+.faq__list--block .faq__button {
+  padding: 31px 40px 33px;
+
+  @include vp-1199 {
+    padding: 24px 29px 24px;
+  }
+
+  @include vp-767 {
+    padding: 19px 14px;
+  }
+}
+
+.faq__list--block .faq__button-icon {
+  margin-top: -11px;
+
+  @include vp-1199 {
+    margin-top: -2px;
+  }
+
+  @include vp-767 {
+    margin-top: 0;
+  }
+}
+
+.faq__item.is-active .faq__button:focus .faq__button-icon {
+  background-color: $color-cerulean-blue;
+  border: 1px solid $color-default-white;
+
+  &::before {
+    background-color: $color-default-white;
+  }
+}

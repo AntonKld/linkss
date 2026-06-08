@@ -1,58 +1,17 @@
-[Можно посмотреть этот сайт](https://antonkld.github.io/1866847-sedona-27/)
+## Краткая инструкция по работе
+Для начала работы у вас должент быть установлен **Node.js**
 
-* Студент: [Антон Кольцов](https://up.htmlacademy.ru/adaptive/27/user/1866847).
-* Наставник: [Олег Цыганов](https://htmlacademy.ru/profile/olegtsyganov).
+### Основные команды для работы
+- Установка - `npm i`
+- Запуск локального сервера без минификаций - `npm start`
+- Запуск локального сервера c минификациями, <br>
+данный вариант не используется в разработке, <br>
+он нужен только для тестов производительности <br>
+на локальном хосте  - `npm run dev`
+- Сборка проекта, минификация скриптов <br>
+и оптимизация изображений перед деплоем на прод - `npm run build`
+- Запуск тестирования на соответствия кодгайдам - `npm test`
+- Создание webp изображений в директории source - `npm run webp`
 
----
-
-**Обратите внимание, что папка с вашими исходными файлами для работы над проектом — `source/`.**
-
-Полезный файл:
-
-- [Contributing.md](Contributing.md) — руководство по внесению изменений.
-
-_Не удаляйте и не обращайте внимание на файлы:_<br>
-_`.github`, `.editorconfig`, `.gitattributes`, `.gitignore`, `.stylelintrc`, `package.json`, `package-lock.json`._
-
----
-
-### Памятка
-
-#### 1. Зарегистрируйтесь на Гитхабе
-
-Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
-
-#### 2. Создайте форк
-
-[Откройте мастер-репозиторий](https://github.com/htmlacademy-adaptive/1866847-sedona-27) и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии будет скопирован в ваш аккаунт.
-
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60807979-e1129f00-a18f-11e9-90d7-b44d2ff2c003.jpg">
-
-Получится вот так:
-
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60807980-e1129f00-a18f-11e9-8137-45876f130340.jpg">
-
-#### 3. Клонируйте репозиторий на свой компьютер
-
-Будьте внимательны: нужно клонировать свой репозиторий (форк), а не репозиторий Академии. Также обратите внимание, что клонировать репозиторий нужно через SSH, а не через HTTPS. Нажмите зелёную кнопку «Code» в правой части экрана, чтобы скопировать SSH-адрес вашего репозитория:
-
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60807982-e1129f00-a18f-11e9-98c4-0d3bf4b85cf1.jpg">
-
-Клонировать репозиторий можно так:
-
-```
-git clone SSH-адрес_вашего_форка
-```
-
-Команда клонирует репозиторий на ваш компьютер и подготовит всё необходимое для старта работы.
-
-#### 4. Начинайте обучение!
-
----
-
-<a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/adaptive/logo-for-github-2.png"></a>
-
-Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS. Адаптивная вёрстка и автоматизация](https://htmlacademy.ru/intensive/adaptive)» от [HTML Academy](https://htmlacademy.ru).
-
-[check-image]: https://github.com/htmlacademy-adaptive/1866847-sedona-27/workflows/Project%20check/badge.svg?branch=master
-[check-url]: https://github.com/htmlacademy-adaptive/1866847-sedona-27/actions
+### Вся разработка ведётся в директории `source`
+### Итоговый код попадает в директорию `build`

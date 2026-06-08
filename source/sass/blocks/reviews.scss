@@ -1,0 +1,298 @@
+.reviews__container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 52px;
+  padding-bottom: 121px;
+
+  @include vp-1199 {
+    display: block;
+    padding-top: 27px;
+    padding-bottom: 101px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 29px;
+  }
+}
+
+.reviews__container h2 {
+  color: $color-cerulean-blue;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 50px;
+  margin: 0 3px 45px;
+
+  @include vp-1199 {
+    font-size: 34px;
+    margin: 0 0 40px;
+  }
+
+  @include vp-767 {
+    order: 1;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0 auto 32px 0;
+  }
+}
+
+.reviews__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-1199 {
+    width: 560px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.reviews__item {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 50px 49px 42px;
+  border: 1px solid $color-cerulean-blue;
+  border-radius: 16px;
+  gap: 25px 0;
+
+  @include vp-1199 {
+    padding: 50px 49px 46px;
+  }
+
+  @include vp-767 {
+    padding: 29px 14px 24px;
+    row-gap: 24px;
+  }
+}
+
+.reviews__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 15px;
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+  }
+}
+
+.reviews__avatar {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0 15px;
+
+  @include vp-767 {
+    gap: 0 10px;
+  }
+}
+
+.reviews__avatar img {
+  border-radius: 50%;
+}
+
+.reviews__avatar h3 {
+  max-width: 95px;
+  color: $color-cerulean-blue;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+
+  @include vp-1199 {
+    font-size: 20px;
+  }
+
+  @include vp-767 {
+    width: 55%;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.reviews__wrapper dl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  margin: 0;
+
+  @include vp-1199 {
+    margin-top: 4px;
+  }
+}
+
+.reviews__info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+
+  @include vp-767 {
+    row-gap: 7px;
+  }
+}
+
+.reviews__info dt {
+  color: $color-cerulean-blue;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+}
+
+.reviews__info dd {
+  color: $color-charcoal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 0;
+
+  @include vp-1199 {
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.reviews__text h3 {
+  color: $color-cerulean-blue;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 0;
+  margin-bottom: 14px;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 15px;
+  }
+}
+
+.reviews__text p {
+  color: $color-charcoal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 0;
+
+  @include vp-1199 {
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}
+
+.reviews__slider {
+  margin-bottom: 39px;
+
+  @include vp-1199 {
+    overflow: visible;
+    margin: 0 0 38px;
+  }
+
+  @include vp-767 {
+    order: 3;
+    overflow: hidden;
+  }
+}
+
+.reviews__control {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 52px;
+
+  @include vp-767 {
+    width: fit-content;
+    order: 2;
+    align-items: flex-start;
+  }
+}
+
+.reviews__scrollbar {
+  width: 100%;
+  background: rgba(49, 109, 194, 0.2);
+  height: 2px;
+
+  @include vp-1199 {
+    width: 82.4%;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.reviews__scrollbar .swiper-scrollbar-drag {
+  background-color: $color-cerulean-blue;
+}
+
+.reviews__arrows {
+  display: flex;
+  justify-content: space-between;
+  width: 60px;
+  height: 22px;
+  align-items: center;
+
+  @include vp-1199 {
+    width: 55px;
+  }
+
+  @include vp-767 {
+    margin-top: -1px;
+  }
+}
+
+.reviews__swiper-button {
+  position: relative;
+  left: unset;
+  right: unset;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  stroke: $color-cerulean-blue;
+  background: 0;
+  border: 0;
+
+  &::after {
+    display: none;
+  }
+
+  &:hover {
+    background-color: $color-default-white;
+  }
+
+  &:focus {
+    background-color: $color-default-white;
+  }
+
+  &:focus-visible {
+    background-color: $color-default-white;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $color-default-white;
+    stroke: rgba(49, 109, 194, 0.7);
+  }
+}

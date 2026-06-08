@@ -1,0 +1,44 @@
+.btn {
+  @include btn;
+
+  padding: 3px 3px 3px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 30px;
+  user-select: none;
+  outline: none;
+
+  color: $color-cerulean-blue;
+
+  background-color: $color-default-white;
+  border: 1px solid $color-cerulean-blue;
+  cursor: pointer;
+
+  transition: all $trans-default;
+
+  &:disabled {
+    color: $color-mischka;
+    border: 1px solid $color-mischka;
+    pointer-events: none;
+
+    & .btn__wrapper {
+      background-color: $color-mischka;
+    }
+  }
+}
+
+.btn__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: $color-cerulean-blue;
+}
+
+.btn__wrapper svg {
+  stroke: $color-default-white;
+}
